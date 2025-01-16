@@ -3,10 +3,22 @@ using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour
 {
-    protected Vector2 direction;
+    protected IEnemyState currentState;
 
 
-    public abstract void Move();
-    public abstract void OnCollide(Collider2D collider);
-    public abstract void ApplyEffectOnPlayer(Player player);
+    public void SetState(IEnemyState newState)
+    {
+        currentState = newState;
+    }
+
+
+    private void Update()
+    {
+        currentState?.UpdateState();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        currentState?.OnCollision(collision.collider);
+    }
 }

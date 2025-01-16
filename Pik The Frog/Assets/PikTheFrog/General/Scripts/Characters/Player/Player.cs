@@ -10,25 +10,15 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        _lives -= amount;
-        if (_lives < 0) _lives = 0;
-
+        Debug.Log("damage");
+        _lives = Mathf.Max(_lives - amount, 0);
         uiManager.UpdateLivesUI(_lives);
-
-        if (_lives <= 0)
-        {
-            Die();
-        }
-    }
-
-    public void ApplyEffect()
-    {
-        // logic
+        if (_lives <= 0) Die();
     }
 
 
     private void Die()
     {
-        //Debug.Log("Player is dead");
+        Debug.Log("dead");
     }
 }

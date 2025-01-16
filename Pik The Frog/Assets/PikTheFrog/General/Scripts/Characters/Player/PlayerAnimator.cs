@@ -1,16 +1,10 @@
 using UnityEngine;
 
 
-public class PlayerAnimator : MonoBehaviour
+public class PlayerAnimator : MonoBehaviour, IPlayerAnimator
 {
     private Animator _animator;
     private Vector2 _lastMovementDirection = Vector2.zero;
-
-
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
 
 
     public void UpdateMovementAnimations(Vector2 movement)
@@ -25,5 +19,11 @@ public class PlayerAnimator : MonoBehaviour
 
         _animator.SetFloat("DirectionX", _lastMovementDirection.x);
         _animator.SetFloat("DirectionY", _lastMovementDirection.y);
+    }
+
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
     }
 }
