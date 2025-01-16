@@ -1,4 +1,7 @@
+using System;
+
+
 public interface IPlayerEffect
 {
-    void ApplyEffect();
+    void ApplyEffect(string effectName, float duration, Action onEffectEnd = null);
 }

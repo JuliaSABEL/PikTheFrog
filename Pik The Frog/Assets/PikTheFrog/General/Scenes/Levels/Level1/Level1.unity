@@ -15667,21 +15667,29 @@ PrefabInstance:
       propertyPath: playerAnimator
       value: 
       objectReference: {fileID: 8663399985210165765}
+    - target: {fileID: 398178526388543977, guid: 065a72744fbd77841869e607653541b3, type: 3}
+      propertyPath: effectAnimator
+      value: 
+      objectReference: {fileID: 8663399985210165770}
     - target: {fileID: 2702709078417859022, guid: 065a72744fbd77841869e607653541b3, type: 3}
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 1508121587}
+    - target: {fileID: 2702709078417859022, guid: 065a72744fbd77841869e607653541b3, type: 3}
+      propertyPath: playerEffectController
+      value: 
+      objectReference: {fileID: 8663399985210165771}
     - target: {fileID: 2805823836395679715, guid: 065a72744fbd77841869e607653541b3, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7099128573781560877, guid: 065a72744fbd77841869e607653541b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.09
+      value: 0.026
       objectReference: {fileID: 0}
     - target: {fileID: 7099128573781560877, guid: 065a72744fbd77841869e607653541b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: -0.032
       objectReference: {fileID: 0}
     - target: {fileID: 7099128573781560877, guid: 065a72744fbd77841869e607653541b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15729,6 +15737,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3afa3f78acd94b242828b7480db64327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &8663399985210165770 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1407645532461468802, guid: 065a72744fbd77841869e607653541b3, type: 3}
+  m_PrefabInstance: {fileID: 8663399985210165764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8663399985210165771 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 398178526388543977, guid: 065a72744fbd77841869e607653541b3, type: 3}
+  m_PrefabInstance: {fileID: 8663399985210165764}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a20024a962c5c444b80810db3718893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
