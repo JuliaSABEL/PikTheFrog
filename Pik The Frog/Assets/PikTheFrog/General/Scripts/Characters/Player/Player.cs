@@ -30,6 +30,6 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("dead");
+        FindObjectOfType<LevelManager>().ReloadCurrentLevel();
     }
 }

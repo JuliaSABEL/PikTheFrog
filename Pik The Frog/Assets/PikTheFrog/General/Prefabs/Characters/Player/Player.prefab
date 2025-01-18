@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 7099128573781560877}
   - component: {fileID: 1407645532461468802}
   - component: {fileID: 7294068566745855333}
+  - component: {fileID: 6113791459817396279}
   - component: {fileID: 347585800040229796}
   - component: {fileID: 2702709078417859022}
   - component: {fileID: 86165391245577338}
@@ -376,6 +377,56 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!60 &6113791459817396279
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2805823836395679715}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.8326734, y: 0.60679317}
+      - {x: -1.3288434, y: -1.1327417}
+      - {x: -0.26396775, y: -1.3487129}
+      - {x: 1.0658016, y: -1.1482542}
+      - {x: 0.48075023, y: 0.6174146}
+  m_UseDelaunayMesh: 0
 --- !u!114 &347585800040229796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,7 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiManager: {fileID: 0}
-  playerEffectController: {fileID: 0}
+  playerEffectController: {fileID: 398178526388543977}
 --- !u!114 &86165391245577338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a20024a962c5c444b80810db3718893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectAnimator: {fileID: 0}
+  effectAnimator: {fileID: 1407645532461468802}
 --- !u!1 &7741789120677334684
 GameObject:
   m_ObjectHideFlags: 0

@@ -181,7 +181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296d8203e9e518c46b084411e249559c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
+  spriteRenderer: {fileID: 0}
+  leftSprite: {fileID: 0}
+  rightSprite: {fileID: 0}
 --- !u!1 &7539615822069302236
 GameObject:
   m_ObjectHideFlags: 0
