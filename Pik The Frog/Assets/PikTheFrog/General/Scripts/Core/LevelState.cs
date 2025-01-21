@@ -1,13 +1,22 @@
 using UnityEngine;
+using System;
 
 
 public class LevelState : MonoBehaviour
 {
-    public bool isGoalUnlocked = false;
+    public event Action OnGoalUnlocked;
+
+    public bool IsGoalUnlocked => _isGoalUnlocked;
+
+    private bool _isGoalUnlocked;
 
 
-    public void SetGoalUnlocked()
+    public void UnlockGoal()
     {
-        isGoalUnlocked = true;
+        if (!_isGoalUnlocked)
+        {
+            _isGoalUnlocked = true;
+            OnGoalUnlocked?.Invoke();
+        }
     }
 }

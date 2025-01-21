@@ -3,7 +3,12 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    public int totalItems;
+    public event System.Action<int> OnItemCollected;
+    public event System.Action OnAllItemsCollected;
+
+    public int RemainingItems => totalItems - _collectedItems;
+
+    [SerializeField] private int totalItems;
 
     private int _collectedItems;
 
@@ -11,27 +16,27 @@ public class ItemManager : MonoBehaviour
     public void CollectItem()
     {
         _collectedItems++;
-        UpdateUI();
+        OnItemCollected?.Invoke(RemainingItems);
+
         if (_collectedItems >= totalItems)
         {
-            UnlockGoal();
+            OnAllItemsCollected?.Invoke();
         }
     }
 
 
-    private void UpdateUI()
+    private void Start()
     {
-        UIManager uiManager = FindObjectOfType<UIManager>();
+        var levelState = FindObjectOfType<LevelState>();
+        if (levelState != null)
+        {
+            OnAllItemsCollected += levelState.UnlockGoal;
+        }
+
+        var uiManager = FindObjectOfType<UIManager>();
         if (uiManager != null)
         {
-            int remaining = totalItems - _collectedItems;
-            uiManager.UpdateCollectibleCounter(remaining);
+            OnItemCollected += uiManager.UpdateCollectibleCounter;
         }
-    }
-
-    private void UnlockGoal()
-    {
-        LevelState levelState = FindObjectOfType<LevelState>();
-        levelState.SetGoalUnlocked();
     }
 }

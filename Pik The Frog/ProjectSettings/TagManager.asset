@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Forest
+  - InvulnerablePlayer
   layers:
   - Default
   - TransparentFX

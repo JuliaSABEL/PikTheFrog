@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour, ICollectible
 {
-    public CollectibleData data;
+    [SerializeField] private CollectibleData data;
 
     private ItemManager _itemManager;
 
@@ -20,10 +20,9 @@ public class Collectible : MonoBehaviour, ICollectible
         _itemManager = FindObjectOfType<ItemManager>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("nyyya");
-        if (collider.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
             Collect();
         }
