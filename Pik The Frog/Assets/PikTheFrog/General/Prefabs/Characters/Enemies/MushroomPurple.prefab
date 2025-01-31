@@ -64,11 +64,42 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 6417925974475764098}
+    - target: {fileID: 5062012598505505088, guid: 3d3f42b374fc0ae458be07ee1e1291a8, type: 3}
+      propertyPath: leftSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d826a1b4a542aaf4897d3465bc766467, type: 3}
+    - target: {fileID: 5062012598505505088, guid: 3d3f42b374fc0ae458be07ee1e1291a8, type: 3}
+      propertyPath: rightSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 27e76a06c0c2f4e42b17f2cfdbc809e2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3291226190805587420, guid: 3d3f42b374fc0ae458be07ee1e1291a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6182064321923899833}
   m_SourcePrefab: {fileID: 100100000, guid: 3d3f42b374fc0ae458be07ee1e1291a8, type: 3}
+--- !u!1 &708694226904922444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3291226190805587420, guid: 3d3f42b374fc0ae458be07ee1e1291a8, type: 3}
+  m_PrefabInstance: {fileID: 2628133427012201616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6182064321923899833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708694226904922444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2669acd1ca97c1645b9dd66543b424b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftSprite: {fileID: 21300000, guid: d826a1b4a542aaf4897d3465bc766467, type: 3}
+  rightSprite: {fileID: 21300000, guid: 27e76a06c0c2f4e42b17f2cfdbc809e2, type: 3}
+  effectAnimator: {fileID: 0}
 --- !u!212 &6417925974475764098 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 9036486700687498514, guid: 3d3f42b374fc0ae458be07ee1e1291a8, type: 3}

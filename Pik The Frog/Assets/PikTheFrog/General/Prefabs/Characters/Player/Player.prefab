@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 2702709078417859022}
   - component: {fileID: 86165391245577338}
   - component: {fileID: 1597754592359289142}
-  - component: {fileID: 398178526388543977}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -197,7 +196,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiManager: {fileID: 0}
-  playerEffectController: {fileID: 398178526388543977}
   playerCollider: {fileID: 6446171967998404712}
   enemyLayer:
     serializedVersion: 2
@@ -227,19 +225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afa3f78acd94b242828b7480db64327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &398178526388543977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2805823836395679715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a20024a962c5c444b80810db3718893, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectAnimator: {fileID: 1407645532461468802}
 --- !u!1 &7942882139241620577
 GameObject:
   m_ObjectHideFlags: 0

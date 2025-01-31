@@ -4,13 +4,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private UIManager uiManager;
-    [SerializeField] private PlayerEffectController playerEffectController;
     [SerializeField] private Collider2D playerCollider;
     [SerializeField] private LayerMask enemyLayer;
 
+    private IEffect _animatorEffect;
     private bool _isInvulnerable;
     private int _lives = 6;
 
+
+    private void Awake()
+    {
+        _animatorEffect = new AnimatorEffect(GetComponent<Animator>(), this);
+    }
 
     public void TakeDamage(int amount)
     {
@@ -18,13 +23,12 @@ public class Player : MonoBehaviour
 
         _isInvulnerable = true;
         SetEnemyCollisions(false);
-        playerEffectController.ApplyEffect("IsDamaged", 3f, OnEffectEnd);
+        _animatorEffect.ApplyEffect("IsDamaged", 3f, OnEffectEnd);
 
         _lives = Mathf.Max(_lives - amount, 0);
         uiManager.UpdateLivesUI(_lives);
         if (_lives <= 0) Die();
     }
-
 
     private void SetEnemyCollisions(bool enable)
     {
