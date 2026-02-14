@@ -16,7 +16,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected virtual void Awake()
     {
-        damage = _data.damage;
+        damage = GetDamage();
         
         movingEnemy = new MovingEnemy(GetComponent<Rigidbody2D>(), GetComponentInChildren<SpriteRenderer>(),
             leftSprite, rightSprite, _data.speed);
@@ -45,4 +45,6 @@ public abstract class EnemyBase : MonoBehaviour
             attackEnemy?.OnCollisionPlayer(collision.collider);
         }
     }
+    
+    protected virtual int GetDamage() => _data.damage;
 }

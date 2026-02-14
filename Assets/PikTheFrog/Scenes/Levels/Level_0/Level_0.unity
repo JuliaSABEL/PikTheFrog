@@ -3517,10 +3517,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1155415512}
     m_Modifications:
     - target: {fileID: 86165391245577338, guid: 065a72744fbd77841869e607653541b3, type: 3}
-      propertyPath: playerData
-      value: 
-      objectReference: {fileID: 11400000, guid: d6065f0c950266c4b8f497fd6399a777, type: 2}
-    - target: {fileID: 86165391245577338, guid: 065a72744fbd77841869e607653541b3, type: 3}
       propertyPath: cameraObserver
       value: 
       objectReference: {fileID: 1408104509}
@@ -3532,14 +3528,6 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 1508121587}
-    - target: {fileID: 2702709078417859022, guid: 065a72744fbd77841869e607653541b3, type: 3}
-      propertyPath: playerData
-      value: 
-      objectReference: {fileID: 11400000, guid: d6065f0c950266c4b8f497fd6399a777, type: 2}
-    - target: {fileID: 2702709078417859022, guid: 065a72744fbd77841869e607653541b3, type: 3}
-      propertyPath: damageEffectData
-      value: 
-      objectReference: {fileID: 11400000, guid: caf37213cfe288d4ea6121daa55a1059, type: 2}
     - target: {fileID: 2702709078417859022, guid: 065a72744fbd77841869e607653541b3, type: 3}
       propertyPath: levelLoadingManager
       value: 

@@ -8,6 +8,9 @@ public class UIManager : MonoBehaviour, IUIManager
 {
     [SerializeField] private List<Image> heartImages;
     [SerializeField] private TMP_Text collectibleCounterText;
+    [SerializeField] private MonoBehaviour itemManager;
+
+    private IItemCollectionService _itemService;
 
 
     public void UpdateHealthBar(int lives)
@@ -18,5 +21,17 @@ public class UIManager : MonoBehaviour, IUIManager
         }
     }
 
-    public void UpdateCollectibleCounterBar(int remaining) => collectibleCounterText.text = $"{remaining}";
+    
+    private void Start()
+    {
+        _itemService = itemManager as IItemCollectionService;
+        _itemService.OnItemCollected += UpdateCollectibleCounterBar;
+    }
+
+    private void OnDestroy()
+    {
+        _itemService.OnItemCollected -= UpdateCollectibleCounterBar;
+    }
+    
+    private void UpdateCollectibleCounterBar(int remaining) => collectibleCounterText.text = $"{remaining}";
 }

@@ -1,30 +1,20 @@
 using UnityEngine;
 
 
-public class Collectible : MonoBehaviour, ICollectible
+public class Collectible : MonoBehaviour
 {
     [SerializeField] private CollectibleData data;
+    [SerializeField] private ItemManager itemManager;
 
-    private ItemManager _itemManager;
-
-
-    public void Collect()
-    {
-        _itemManager.CollectItem();
-        Destroy(gameObject);
-    }
-
-
-    private void Start()
-    {
-        _itemManager = FindObjectOfType<ItemManager>();
-    }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player"))
-        {
-            Collect();
-        }
+        if (collision.collider.CompareTag("Player")) Collect();
+    }
+    
+    private void Collect()
+    {
+        itemManager.CollectItem();
+        Destroy(gameObject);
     }
 }

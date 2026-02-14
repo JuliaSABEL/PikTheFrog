@@ -196,10 +196,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiManager: {fileID: 0}
+  levelLoadingManager: {fileID: 0}
   playerCollider: {fileID: 6446171967998404712}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  playerData: {fileID: 11400000, guid: d6065f0c950266c4b8f497fd6399a777, type: 2}
+  damageEffectData: {fileID: 11400000, guid: caf37213cfe288d4ea6121daa55a1059, type: 2}
 --- !u!114 &86165391245577338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97aa0abde494c5a46be2edc4dce93a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  playerData: {fileID: 11400000, guid: d6065f0c950266c4b8f497fd6399a777, type: 2}
+  cameraObserver: {fileID: 0}
 --- !u!114 &1597754592359289142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afa3f78acd94b242828b7480db64327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1407645532461468802}
 --- !u!1 &7942882139241620577
 GameObject:
   m_ObjectHideFlags: 0
