@@ -16,19 +16,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        _inputProvider = inputHandler as IInputProvider;
         _cameraObserver = cameraObserver as ICameraObserver;
+    }
+
+    private void Start()
+    {
+        _inputProvider = inputHandler as IInputProvider;
     }
 
     private void FixedUpdate()
     {
         _movementInput = _inputProvider.GetMovementInput();
 
-        float speedFactor = _movementInput.magnitude;
-        Vector2 newPosition = rb.position + _movementInput.normalized * playerData.maxSpeed * speedFactor * Time.fixedDeltaTime;
+        Vector2 newPosition = rb.position + _movementInput * playerData.maxSpeed * Time.fixedDeltaTime;
         rb.MovePosition(newPosition);
 
         playerAnimator.UpdateMovementAnimations(_movementInput);
+    }
+
+    private void LateUpdate()
+    {
         _cameraObserver.UpdatePosition(transform.position);
     }
 }
