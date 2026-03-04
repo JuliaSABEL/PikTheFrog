@@ -1,5 +1,5 @@
 # Pik The Frog 🐸
-## 2D Top-Down Arcade Vertical Slice Prototype (Android)
+## 2D Top-Down Arcade Prototype (Android)
 ___
 ### Overview
 Pik The Frog is a 2D top-down arcade gameplay prototype developed for mobile devices (currently configured for Android).
