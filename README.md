@@ -169,5 +169,5 @@ Open to:
 - Full-time opportunities
 
 Email: sabelnikova.j.partner@gmail.com  
-LinkedIn: www.linkedin.com/in/julia-sabelnikova-077892329  
+LinkedIn: www.linkedin.com/in/julia-sabelnikova
 Telegram: https://t.me/S_Julia_A_06 
