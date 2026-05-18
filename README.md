@@ -162,12 +162,6 @@ ___
 
 Unity Gameplay Developer (Junior+)
 
-Open to:
-
-- Freelance projects
-- Contract work
-- Full-time opportunities
-
 Email: sabelnikova.j.partner@gmail.com  
 LinkedIn: www.linkedin.com/in/julia-sabelnikova                                                                                                                                                                            
 Telegram: https://t.me/S_Julia_A_06 
