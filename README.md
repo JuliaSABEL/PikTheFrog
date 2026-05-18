@@ -1,4 +1,4 @@
-# Pik The Frog 🐸
+# Pik The Frog
 ## 2D Top-Down Arcade Prototype (Android)
 ___
 ### Overview
